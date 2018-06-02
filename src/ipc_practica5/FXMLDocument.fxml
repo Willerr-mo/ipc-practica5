@@ -18,11 +18,11 @@
          <top>
             <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
                <children>
-                  <MenuBar>
+                  <MenuBar fx:id="myMenuBar">
                     <menus>
                       <Menu text="_Archivo">
                         <items>
-                          <MenuItem onAction="#menuAction" text="_Salir" />
+                          <MenuItem fx:id="salir" onAction="#salir" text="_Salir" />
                         </items>
                       </Menu>
                       <Menu text="_Lanzar">
@@ -38,8 +38,8 @@
                            <items>
                               <Menu text="_Comprar en">
                                  <items>
-                                    <CheckMenuItem fx:id="amazonCheck" onAction="#menuAction" text="_Amazon" />
-                                    <CheckMenuItem fx:id="ebayCheck" onAction="#menuAction" text="_Ebay" />
+                                    <CheckMenuItem fx:id="amazonCheck" text="_Amazon" />
+                                    <CheckMenuItem fx:id="ebayCheck" text="_Ebay" />
                                  </items>
                               </Menu>
                            </items>
@@ -56,7 +56,7 @@
                                  </image>
                               </ImageView>
                            </graphic></Button>
-                        <Button fx:id="hola" mnemonicParsing="false" onAction="#buttonAction">
+                        <Button fx:id="blogger" mnemonicParsing="false" onAction="#buttonAction">
                            <graphic>
                               <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -65,7 +65,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="hola1" minHeight="108.0" mnemonicParsing="false" onAction="#buttonAction">
+                        <Button fx:id="ebay" minHeight="108.0" mnemonicParsing="false" onAction="#buttonAction">
                            <graphic>
                               <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -74,7 +74,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="hola2" mnemonicParsing="false" onAction="#buttonAction">
+                        <Button fx:id="facebook" mnemonicParsing="false" onAction="#buttonAction">
                            <graphic>
                               <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
@@ -83,7 +83,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="hola3" mnemonicParsing="false" onAction="#buttonAction">
+                        <Button fx:id="googleplus" mnemonicParsing="false" onAction="#buttonAction">
                            <graphic>
                               <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
