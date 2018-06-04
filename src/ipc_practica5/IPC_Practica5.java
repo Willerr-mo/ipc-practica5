@@ -5,6 +5,8 @@
  */
 package ipc_practica5;
 
+import java.util.Locale;
+import java.util.ResourceBundle;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -21,7 +23,12 @@ public class IPC_Practica5 extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        
+        
+        Locale locale = Locale.getDefault();
+        ResourceBundle bundle = ResourceBundle.getBundle("ipc_practica5.strings", locale);
+        
+        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"), bundle);
         
         Scene scene = new Scene(root);
         scene.setOnKeyPressed((KeyEvent ke) -> {
